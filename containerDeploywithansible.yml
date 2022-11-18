@@ -23,16 +23,16 @@
     #  become: true
 
       
-    - name: Log into DockerHub
-      docker_login:
-        registry: docker.io
-        username: jayn21
-        password: "{{ docker_password }}"
+#     - name: Log into DockerHub
+#       docker_login:
+#         registry: docker.io
+#         username: jayn21
+#         password: "{{ docker_password }}"
         
-    - name: pull an image
-      docker_image:
-        name: "jan21/demo:test-deploy_{{ BUILD_NUMBER }}"
-        source: pull
+#     - name: pull an image
+#       docker_image:
+#         name: "jan21/demo:test-deploy_{{ BUILD_NUMBER }}"
+#         source: pull
 
     - name: remove container
       docker_container:
